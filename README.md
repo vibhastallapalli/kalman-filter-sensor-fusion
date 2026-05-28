@@ -128,10 +128,3 @@ for each step k at 100 Hz:
 ```
 
 **Why fusion wins**: Between GPS updates the vehicle travels up to 18 m (9 m/s for 2 s). A GPS-only system is completely blind to this motion and accumulates large position errors. The Kalman filter integrates the high-frequency accelerometer to track this displacement, then uses the rare GPS fix to prevent long-term drift. The two sensors are *complementary*: GPS prevents bias accumulation; the accelerometer provides dense, low-noise dead-reckoning between fixes.
-
-## Files Generated
-
-| File | Description |
-|---|---|
-| `results/simulation.png` | Three-panel diagnostic plot |
-| `results/simulation_log.csv` | Per-step log: true state, sensor readings, Kalman estimate, errors |
